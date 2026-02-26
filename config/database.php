@@ -108,9 +108,9 @@ return [
             'charset' => env('DB_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
-            // 'schema' => 'laravel',,laravel
-            'search_path' => 'public',
-            'sslmode' => env('DB_SSLMODE', 'prefer'),
+            'schema' => 'laravel',
+            'search_path' => 'public,laravel',
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
@@ -142,7 +142,7 @@ return [
     */
 
     'migrations' => [
-        'table' => 'migrations',
+        'table' => 'laravel.migrations',
         'update_date_on_publish' => true,
     ],
 
