@@ -19,7 +19,7 @@ class RoleMiddleware
         return redirect('/login');
       }
 
-      if ($request->user()->role !== $role) {
+      elseif ($request->user()->role !== $role) {
           abort(403, 'No tienes permiso para acceder.');
       } 
         return $next($request);
