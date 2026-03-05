@@ -21,7 +21,8 @@ class RoleMiddleware
 
       elseif ($request->user()->role !== $role) {
           abort(403, 'No tienes permiso para acceder.');
-      } 
+      } else {
         return $next($request);
+      }
     }
 }
