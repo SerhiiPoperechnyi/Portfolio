@@ -2,9 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+    Route::resource('projects', ProjectController::class)->except(['show']);
+});
+
+Route::get('/projects/{project}', [ProjectController::class, 'show'])
+    ->name('projects.show');
+Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/test', function () {
+    return view('home');
 });
 
 Route::get('/dashboard', function () {
@@ -16,17 +26,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::middleware(['auth', 'role:admin'])->group(function () {
-    Route::get('/admin', function () {
-        return "Zona exclusiva ADMIN";
-    });
-});
-
-Route::middleware(['auth', 'role:user'])->group(function () {
-    Route::get('/perfil', function () {
-        return "Zona USER";
-    });
-});
-
 require __DIR__.'/auth.php';
 
