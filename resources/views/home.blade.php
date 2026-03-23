@@ -1,5 +1,5 @@
 <x-app-layout>
-
+<h1 class="text-3xl font-bold text-center my-10">Mis Proyectos</h1>
 <div class="flex flex-col items-center gap-16 py-10">
 
 @foreach($projects as $project)
