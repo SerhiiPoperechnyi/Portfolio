@@ -21,8 +21,9 @@ class Project extends Model
       return $this->belongsTo(User::class);
     }
 
-    public function images(){
-      return $this->hasMany(ProjectImage::class);
+    public function images()
+    {
+        return $this->hasMany(ProjectImage::class);
     }
 
     public function files(){

@@ -33,4 +33,42 @@
             </main>
         </div>
     </body>
+    <footer class="bg-gray-900 text-white mt-20">
+    <div class="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8">
+
+        {{-- ABOUT --}}
+        <div>
+            <h2 class="text-xl font-bold mb-3">Portfolio</h2>
+            <p class="text-gray-400 text-sm">
+                Portfolio de desarrollo web. Aplicaciones modernas con Laravel y tecnologías actuales.
+            </p>
+        </div>
+
+        {{-- NAV --}}
+        <div>
+            <h3 class="font-semibold mb-3">Navegación</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+                <li><a href="/" class="hover:text-white">Inicio</a></li>
+                <li><a href="/login" class="hover:text-white">Login</a></li>
+            </ul>
+        </div>
+
+        {{-- CONTACT --}}
+        <div>
+            <h3 class="font-semibold mb-3">Contacto</h3>
+            <ul class="space-y-2 text-gray-400 text-sm">
+                <li>sp24es@gmail.com</li>
+                <li><a href="https://github.com/SerhiiPoperechnyi" target="_blank" class="hover:text-white">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/serhii-poperechnyi-b786311b1/" target="_blank" class="hover:text-white">LinkedIn</a></li>
+                <li><a href="https://wa.me/722642612" target="_blank" class="hover:text-white">WhatsApp</a></li>
+                <li><a href="https://t.me/serg_1662" target="_blank" class="hover:text-white">Telegram</a></li>
+              </ul>
+        </div>
+
+    </div>
+
+    <div class="text-center text-gray-500 text-sm pb-6">
+        © 2026 app-portfolio. Todos los derechos reservados.
+    </div>
+</footer>
 </html>

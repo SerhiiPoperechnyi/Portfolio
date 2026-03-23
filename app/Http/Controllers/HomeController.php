@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $projects = Project::where('is_published', true)->latest()->get();
+        $projects = Project::with('images')->latest()->get();
         return view('home', compact('projects'));
     }
 }
